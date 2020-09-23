@@ -1,7 +1,8 @@
 
-process.stdout.write('hello from spinner1.js... \rheyyy\n');
+//process.stdout.write('hello from spinner1.js... \rheyyy\n');
 
-setTimeout(() => {
+const spinner = function() {
+  setTimeout(() => {
   process.stdout.write('\r|   ');
 }, 100);
 
@@ -34,3 +35,8 @@ setTimeout(() => {
 setTimeout(() => {
   process.stdout.write('\r|   ');
 }, 1500);
+};
+
+console.log(spinner());
+
+module.exports = spinner;
